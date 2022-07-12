@@ -2,6 +2,14 @@
 resizeHeroImg();
 
 window.addEventListener('resize', resizeHeroImg);
+window.addEventListener('scroll', e => {
+	const scrollToTopBtn = document.querySelector('.scrollToTopBtn');
+	if (window.scrollY != 0) {
+		scrollToTopBtn.classList.add('inView');
+	} else {
+		scrollToTopBtn.classList.remove('inView');
+	}
+});
 
 // fade in on scroll animation using intersection observer
 const domElements = document.querySelectorAll('body *');
@@ -12,7 +20,7 @@ domElements.forEach(elem => {
 const fadeInElems = document.querySelectorAll('.fadeInUp');
 const io = new IntersectionObserver(entries => {
 	entries.forEach(entry => {
-		if (entry.isIntersecting) entry.target.classList.add('inView');
+		if (entry.isIntersecting && !entry.target.classList.contains('noFadeInUp')) entry.target.classList.add('inView');
 	});
 });
 
@@ -33,4 +41,8 @@ function handleNavClick() {
 		mobileNavItems.style.height = `0px`;
 		mobileNavItems.classList.add('h-0');
 	}
+}
+
+function handleScrollToTopClick() {
+	window.scrollTo(0, 0);
 }
