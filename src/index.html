@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="./index.css">
+	<title>NERC 2022</title>
+</head>
+<body>
+	<!-- desktop navbar -->
+	<nav class="sticky top-0 w-full hidden lg:flex justify-center border-umlblue text-umlblue border-b z-10 bg-white py-6">
+		<div class="responsive-width">
+			<div class="flex justify-between">
+				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
+				<div class="child:p-2 child:text-center flex gap-4 items-center">
+					<a class="nav-link" href="#info">Info</a>
+					<a class="nav-link" href="#schedule">Schedule</a>
+					<a class="nav-link" href="#location">Location</a>
+					<a class="nav-link" href="#speakers">Speakers</a>
+					<a class="nav-link" href="#organizers">Organizers</a>
+					<a class="nav-link" href="#contact">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- mobile navbar -->
+	<nav class="sticky top-0 w-full flex lg:hidden justify-center border-umlblue text-umlblue border-b z-10 bg-white py-6">
+		<div class="responsive-width">
+			<div class="flex justify-between items-center">
+				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
+				<button onclick="handleNavClick()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+			</div>
+			<div id="mobile-nav-items" class="noFadeInUp child:p-2 child:text-center flex flex-col gap-4 items-center transition-[height] duration-300 ease-in-out overflow-hidden h-0">
+				<div class="border-b border-umlblue w-full my-3"></div>
+				<a class="nav-link" href="#info">Info</a>
+				<a class="nav-link" href="#schedule">Schedule</a>
+				<a class="nav-link" href="#location">Location</a>
+				<a class="nav-link" href="#speakers">Speakers</a>
+				<a class="nav-link" href="#organizers">Organizers</a>
+				<a class="nav-link" href="#contact">Contact</a>
+			</div>
+		</div>
+	</nav>
+
+	<section id="hero" class="hero flex flex-col gap-12 justify-center items-center w-full bg-[url('https://fpoimg.com/1920x1080?text=Hero%20Image')] bg-center bg-cover">
+		<h1 class="text-8xl text-umlblue font-bold text-center">NERC 2022</h1>
+		<div class="hero-button-group flex justify-center items-center gap-8">
+			<button class="btn">Register</button>
+			<button class="btn">Submit</button>
+		</div>
+	</section>
+
+	<div class="flex justify-center">
+		<div class="main-wrapper responsive-width">
+			<section class="flex flex-col py-12 gap-8">
+				<section class="main-content col-span-4 flex flex-col gap-24">
+					<section id="sponsors">
+						<h2 class="text-center text-neutral-500 text-lg font-bold my-4">Our Sponsors</h2>
+						<div class="flex lg:justify-center gap-4 child:w-36 child:rounded-md overflow-x-scroll overflow-y-hidden">
+							<img src="https://fpoimg.com/1280x720" alt="Sponsor #1" />
+							<img src="https://fpoimg.com/1280x720" alt="Sponsor #2" />
+							<img src="https://fpoimg.com/1280x720" alt="Sponsor #3" />
+							<img src="https://fpoimg.com/1280x720" alt="Sponsor #4" />
+						</div>
+					</section>
+					<section id="info">
+						<h2 class="sub-heading">What is NERC?</h2>
+						<p>The Northeast Robotics Colloquium (NERC) brings together the roboticists in the northeastern United States and Canada, in an event that is simultaneously a research meeting, a networking event, a job-fair, and a showcase for established and up-and-coming robot companies. We hope to promote the kind of healthy and well-connected robotics community that will fuel the field's rapid growth in the coming decade!</p>
+					</section>
+					<section id="schedule">
+						<h2 class="sub-heading">Schedule</h2>
+						<p>The schedule will be updated soon!</p>
+						<table class="mt-4 w-full">
+							<tbody>
+								<tr>
+									<td>8:00 am</td>
+									<td>Event #1</td>
+								</tr>
+								<tr>
+									<td>9:00 am</td>
+									<td>Event #2</td>
+								</tr>
+								<tr>
+									<td>10:00 am</td>
+									<td>Event #3</td>
+								</tr>
+								<tr>
+									<td>11:00 am</td>
+									<td>Event #4</td>
+								</tr>
+								<tr>
+									<td>12:00 pm</td>
+									<td>Event #5</td>
+								</tr>
+								<tr>
+									<td>13:00 pm</td>
+									<td>Event #6</td>
+								</tr>
+								<tr>
+									<td>14:00 pm</td>
+									<td>Event #7</td>
+								</tr>
+								<tr>
+									<td>15:00 pm</td>
+									<td>Event #8</td>
+								</tr>
+								<tr>
+									<td>16:00 pm</td>
+									<td>Event #9</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section id="location">
+						<h2 class="sub-heading">Where will NERC be this year?</h2>
+						<p>Location details will be posted soon!</p>
+					</section>
+					<section id="register">
+						<h2 class="sub-heading">How do I register?</h2>
+						<p>Registration details will be posted soon!</p>
+					</section>
+					<section id="submit-your-poster">
+						<h2 class="sub-heading">Submit your poster for presentation at NERC <a class="link" href="#">here</a>!</h2>
+					</section>
+					<section id="speakers">
+						<h2 class="sub-heading">Speakers</h2>
+						<div class="flex flex-col lg:grid grid-cols-2 gap-4">
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #1" />
+								<p class="">Speaker #1</p>
+							</div>
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #2" />
+								<p class="">Speaker #2</p>
+							</div>
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #3" />
+								<p class="">Speaker #3</p>
+							</div>
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #4" />
+								<p class="">Speaker #4</p>
+							</div>
+						</div>
+					</section>
+					<section id="organizers">
+						<h2 class="sub-heading">Organizers</h2>
+						<div class="flex flex-col lg:grid grid-cols-2 gap-4">
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #1" />
+								<p class="">Organizer #1</p>
+							</div>
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #2" />
+								<p class="">Organizer #2</p>
+							</div>
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #3" />
+								<p class="">Organizer #3</p>
+							</div>
+							<div class="card">
+								<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #4" />
+								<p class="">Organizer #4</p>
+							</div>
+						</div>
+					</section>
+					<section id="contact">
+						<h2 class="sub-heading">Contact</h2>
+						<p>Contact details will be posted soon!</p>
+					</section>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<footer class="w-full text-center bg-neutral-100 p-16">
+		<p>NERC 2022 University of Massachusetts Lowell</p>
+	</footer>
+
+	<script src="./index.js"></script>
+</body>
+</html>

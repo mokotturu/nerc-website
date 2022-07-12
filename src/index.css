@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.responsive-width {
+		@apply w-[85%] lg:w-[60em] xl:w-[75em] 2xl:w-[85em];
+	}
+	.sub-heading {
+		@apply text-3xl font-bold my-4;
+	}
+
+	.card {
+		@apply rounded-lg flex p-6 items-center gap-8 border border-neutral-200 bg-neutral-100 hover:scale-105 transition-all duration-300 ease-in-out;
+	}
+
+	.card-image {
+		@apply rounded-full w-24;
+	}
+
+	.nav-link {
+		@apply hover:bg-neutral-100 transition duration-300 rounded-md;
+	}
+
+	tr {
+		@apply hover:bg-neutral-200 border-b border-neutral-300 last:border-b-0 even:bg-neutral-50;
+	}
+
+	td, th {
+		@apply pl-4 pr-16 py-2;
+	}
+
+	.link {
+		@apply text-umlblue underline;
+	}
+
+	.fadeInUp {
+		@apply opacity-0 transition-all duration-300 transform-gpu translate-y-8;
+	}
+
+	.fadeInUp.inView {
+		@apply opacity-100 translate-y-0;
+	}
+
+	.btn {
+		@apply px-8 py-4 bg-umlblue text-white rounded-md shadow-sm hover:shadow-lg shadow-umlblue hover:shadow-umlblue;
+	}
+}
+
+* {
+	font-family: 'Inter', sans-serif;
+	scroll-behavior: smooth;
+}
