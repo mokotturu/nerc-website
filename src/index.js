@@ -20,6 +20,7 @@ fadeInElems.forEach(elem => io.observe(elem));
 
 function resizeHeroImg() {
 	document.querySelector('#hero').style.height = `${window.innerHeight - document.querySelector('nav').offsetHeight}px`;
+	document.querySelector('#main-wrapper').style.top = `${document.querySelector('nav').offsetHeight}px`;
 }
 
 // handle mobile navbar menu icon click

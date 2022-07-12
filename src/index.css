@@ -6,6 +6,7 @@
 	.responsive-width {
 		@apply w-[85%] lg:w-[60em] xl:w-[75em] 2xl:w-[85em];
 	}
+
 	.sub-heading {
 		@apply text-3xl font-bold my-4;
 	}
@@ -50,5 +51,5 @@
 * {
 	font-family: 'Inter', sans-serif;
 	scroll-behavior: smooth;
-	scroll-padding-top: 8rem;
+	scroll-padding-top: 2rem;
 }
