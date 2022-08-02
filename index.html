@@ -14,8 +14,6 @@
 	<link rel="stylesheet" href="./index.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
-	<script src="./index.js" type="module" defer></script>
-	<script src="./map.js" type="module" defer></script>
 	<title>NERC 2022</title>
 </head>
 <body>
@@ -257,6 +255,12 @@
 										</svg>
 									</button>
 								</div>
+								<div class="hidden-images">
+									<img src="img/tsongas-center.jpg" class="hidden invisible">
+									<img src="img/lowell-national-historic-park.jpg" class="hidden invisible">
+									<img src="img/national-streetcar-museum.jpg" class="hidden invisible">
+									<img src="img/boott-cotton-mills-museum.jpg" class="hidden invisible">
+								</div>
 							</div>
 						</section>
 					</section>
@@ -275,5 +279,7 @@
 			<path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
 		</svg>
 	</button>
+	<script type="module" src="index.js"></script>
+	<script type="module" src="map.js"></script>
 </body>
 </html>
