@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.responsive-width {
+		@apply w-[85%] lg:w-[60em] xl:w-[75em] 2xl:w-[85em];
+	}
+
+	.sub-heading {
+		@apply text-umlblue-900 text-3xl font-bold my-6;
+	}
+
+	.card {
+		@apply rounded-lg flex p-6 items-center gap-8 border border-neutral-200 bg-neutral-100;
+	}
+
+	.card-image {
+		@apply rounded-full w-24;
+	}
+
+	.plan {
+		@apply border border-gray-200 p-6 rounded-lg child:text-gray-600 flex flex-col flex-1;
+	}
+
+	.plan-title {
+		@apply text-lg text-black font-medium mb-2;
+	}
+
+	.plan-description {
+		@apply mb-6;
+	}
+
+	.plan-button {
+		@apply bg-umlblue-500 text-white w-full rounded-lg text-center py-2 hover:brightness-125;
+	}
+
+	.plan-price {
+		@apply text-3xl font-bold text-black mb-6;
+	}
+
+	.plan-list-heading {
+		@apply font-medium text-black mb-2;
+	}
+
+	.nav-link {
+		@apply hover:bg-umlbluedarktransparent transition duration-300 rounded-md;
+	}
+
+	tr {
+		@apply hover:bg-neutral-200 border-b border-neutral-300 last:border-b-0 even:bg-neutral-50;
+	}
+
+	td, th {
+		@apply pl-4 pr-16 py-2;
+	}
+
+	td {
+		@apply first:text-black first:font-semibold text-gray-700;
+	}
+
+	.link {
+		@apply text-umlblue-500 underline;
+	}
+
+	.fadeInUp {
+		@apply opacity-0 transition-all duration-300 transform-gpu translate-y-8;
+	}
+
+	.fadeInUp.inView {
+		@apply opacity-100 translate-y-0;
+	}
+
+	.btn {
+		@apply px-8 py-4 bg-umlblue-500 text-white rounded-md hover:brightness-125;
+	}
+}
+
+* {
+	font-family: 'Inter', sans-serif;
+	scroll-behavior: smooth;
+	scroll-padding-top: 8rem;
+}

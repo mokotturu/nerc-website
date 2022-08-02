@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Monish Reddy Kotturu">
+	<meta name="description" content="Website for NERC 2022">
+	<meta property="og:title" content="Welcome to NERC 2022">
+	<meta property="og:type" content="website">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./index.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+	<script src="./index.js" defer></script>
+	<script src="./map.js" defer></script>
+	<title>NERC 2022</title>
+</head>
+<body>
+	<!-- desktop navbar -->
+	<nav class="fixed top-0 w-full hidden lg:flex justify-center text-white z-10 backdrop-blur py-6">
+		<div class="responsive-width">
+			<div class="flex justify-between">
+				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
+				<div class="child:p-2 child:text-center flex gap-4 items-center">
+					<a class="nav-link" href="#info">Info</a>
+					<a class="nav-link" href="#schedule">Schedule</a>
+					<a class="nav-link" href="#location">Location</a>
+					<a class="nav-link" href="#speakers">Speakers</a>
+					<a class="nav-link" href="#organizers">Organizers</a>
+					<a class="nav-link" href="#register">Register</a>
+					<a class="nav-link" href="#contact">Contact</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<!-- mobile navbar -->
+	<nav class="fixed top-0 w-full flex lg:hidden justify-center text-white z-10 backdrop-blur py-6">
+		<div class="responsive-width">
+			<div class="flex justify-between items-center">
+				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
+				<button onclick="handleNavClick()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="#0469B1" stroke-width="2">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+			</div>
+			<div id="mobile-nav-items" class="noFadeInUp child:p-2 child:text-center flex flex-col gap-4 items-center transition-[height] duration-300 ease-in-out overflow-hidden h-0">
+				<div class="border-b border-umlblue-500 w-full my-3"></div>
+				<a onclick="handleNavClick()" class="nav-link" href="#info">Info</a>
+				<a onclick="handleNavClick()" class="nav-link" href="#schedule">Schedule</a>
+				<a onclick="handleNavClick()" class="nav-link" href="#location">Location</a>
+				<a onclick="handleNavClick()" class="nav-link" href="#speakers">Speakers</a>
+				<a onclick="handleNavClick()" class="nav-link" href="#organizers">Organizers</a>
+				<a onclick="handleNavClick()" class="nav-link" href="#register">Register</a>
+				<a onclick="handleNavClick()" class="nav-link" href="#contact">Contact</a>
+			</div>
+		</div>
+	</nav>
+
+	<section id="main-wrapper" class="">
+		<section id="hero" class="hero flex flex-col gap-12 justify-center items-center w-full bg-[url('img/aerial-north.webp')] bg-center bg-cover">
+			<h1 class="text-8xl text-white font-bold text-center">NERC 2022</h1>
+			<div class="hero-button-group flex justify-center items-center gap-8">
+				<a class="btn" href="#register">Register</a>
+				<a class="btn" href="#">Submit</a>
+			</div>
+		</section>
+
+		<div class="flex justify-center">
+			<div class="responsive-width">
+				<section class="flex flex-col py-12 gap-8">
+					<section class="main-content col-span-4 flex flex-col gap-24">
+						<section id="sponsors">
+							<h2 class="text-center text-neutral-500 text-lg font-bold my-4">Our Sponsors</h2>
+							<div class="flex lg:justify-center gap-4 child:w-36 child:rounded-md flex-wrap justify-center">
+								<img src="https://fpoimg.com/1280x720" alt="Sponsor #1" />
+								<img src="https://fpoimg.com/1280x720" alt="Sponsor #2" />
+								<img src="https://fpoimg.com/1280x720" alt="Sponsor #3" />
+								<img src="https://fpoimg.com/1280x720" alt="Sponsor #4" />
+							</div>
+						</section>
+						<section id="info">
+							<h2 class="sub-heading">What is NERC?</h2>
+							<p class="text-gray-700">The Northeast Robotics Colloquium (NERC) brings together the roboticists in the northeastern United States and Canada, in an event that is simultaneously a research meeting, a networking event, a job-fair, and a showcase for established and up-and-coming robot companies. We hope to promote the kind of healthy and well-connected robotics community that will fuel the field's rapid growth in the coming decade!</p>
+						</section>
+						<section id="schedule">
+							<h2 class="sub-heading">Schedule</h2>
+							<p class="text-gray-700">The schedule will be updated soon!</p>
+							<table class="mt-4 w-full">
+								<tbody>
+									<tr>
+										<td>8:00 am</td>
+										<td>Event #1</td>
+									</tr>
+									<tr>
+										<td>9:00 am</td>
+										<td>Event #2</td>
+									</tr>
+									<tr>
+										<td>10:00 am</td>
+										<td>Event #3</td>
+									</tr>
+									<tr>
+										<td>11:00 am</td>
+										<td>Event #4</td>
+									</tr>
+									<tr>
+										<td>12:00 pm</td>
+										<td>Event #5</td>
+									</tr>
+									<tr>
+										<td>13:00 pm</td>
+										<td>Event #6</td>
+									</tr>
+									<tr>
+										<td>14:00 pm</td>
+										<td>Event #7</td>
+									</tr>
+									<tr>
+										<td>15:00 pm</td>
+										<td>Event #8</td>
+									</tr>
+									<tr>
+										<td>16:00 pm</td>
+										<td>Event #9</td>
+									</tr>
+								</tbody>
+							</table>
+						</section>
+						<section id="location">
+							<h2 class="sub-heading">Where will NERC be this year?</h2>
+							<p class="mb-6 text-gray-700">Location details will be posted soon!</p>
+							<div id="map" class="h-96"></div>
+						</section>
+						<section id="submit-your-poster">
+							<h2 class="sub-heading">Submit your poster for presentation at NERC <a class="link" href="#">here</a>!</h2>
+						</section>
+						<section id="speakers">
+							<h2 class="sub-heading">Speakers</h2>
+							<div class="flex flex-col lg:grid grid-cols-2 gap-4">
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #1" />
+									<p class="">Speaker #1</p>
+								</div>
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #2" />
+									<p class="">Speaker #2</p>
+								</div>
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #3" />
+									<p class="">Speaker #3</p>
+								</div>
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #4" />
+									<p class="">Speaker #4</p>
+								</div>
+							</div>
+						</section>
+						<section id="organizers">
+							<h2 class="sub-heading">Organizers</h2>
+							<div class="flex flex-col lg:grid grid-cols-2 gap-4">
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #1" />
+									<p class="">Organizer #1</p>
+								</div>
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #2" />
+									<p class="">Organizer #2</p>
+								</div>
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #3" />
+									<p class="">Organizer #3</p>
+								</div>
+								<div class="card">
+									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #4" />
+									<p class="">Organizer #4</p>
+								</div>
+							</div>
+						</section>
+						<section id="register">
+							<h2 class="sub-heading">How do I register?</h2>
+							<p class="mb-8 text-gray-700">Registration details will be posted soon!</p>
+							<div id="plans" class="flex flex-col lg:flex-row justify-center gap-8 flex-wrap">
+								<div class="plan">
+									<p class="plan-title">K-12 Students and Teachers</p>
+									<p class="plan-description">Online Registration</p>
+									<p class="plan-price">$15</p>
+									<a href="#" class="plan-button">Choose plan</a>
+									<hr class="my-6" />
+									<p class="plan-list-heading">Who's this for</p>
+									<ul class="eligible-members list-disc list-inside">
+										<li>K-12</li>
+										<li>Undergraduate students</li>
+										<li>High school teachers</li>
+										<li>Family members above 12</li>
+									</ul>
+								</div>
+								<div class="plan">
+									<p class="plan-title">Regular Registration</p>
+									<p class="plan-description">Online Registration</p>
+									<p class="plan-price">$50</p>
+									<a href="#" class="plan-button">Choose plan</a>
+									<hr class="my-6" />
+									<p class="plan-list-heading">Who's this for</p>
+									<ul class="eligible-members list-disc list-inside">
+										<li>MS and PhD students</li>
+										<li>Post-docs</li>
+										<li>Faculty members</li>
+										<li>Industrial participants</li>
+									</ul>
+								</div>
+								<div class="plan">
+									<p class="plan-title">On-Site Registration</p>
+									<p class="plan-description">Month date, year On-Site Registration</p>
+									<p class="plan-price">$75</p>
+									<a href="#" class="plan-button">Choose plan</a>
+									<hr class="my-6" />
+									<p class="plan-list-heading">Who's this for</p>
+									<ul class="eligible-members list-disc list-inside">
+										<li>MS and PhD students</li>
+										<li>Post-docs</li>
+										<li>Faculty members</li>
+										<li>Industrial participants</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section id="contact">
+							<h2 class="sub-heading">Contact</h2>
+							<p class="text-gray-700">Contact details will be posted soon!</p>
+						</section>
+						<section id="local-attractions">
+							<h2 class="sub-heading">Local Attractions</h2>
+							<div data-location-id="0" id="local-attractions-card" class="attraction-card rounded-md border border-gray-200 text-center p-8 flex flex-col justify-center items-center gap-4 bg-cover bg-center">
+								<span class="attractions-gradient-overlay absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent to-white"></span>
+								<h3 id="location-name" class="font-semibold text-3xl mt-64"></h3>
+								<p id="location-description" class="text-gray-700"></p>
+								<div class="flex justify-center items-center gap-2">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700" viewBox="0 0 20 20" fill="currentColor">
+										<path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+									</svg>
+									<p id="location-location" class="text-gray-700"></p>
+								</div>
+								<div class="slide-controls absolute w-full px-8 flex justify-between align-center top-1/2 left-0">
+									<button class="rounded-full bg-white shadow-md p-4" onclick="handleLocationLeftClick()">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+										</svg>
+									</button>
+									<button class="rounded-full bg-white shadow-md p-4" onclick="handleLocationRightClick()">
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+										</svg>
+									</button>
+								</div>
+							</div>
+						</section>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<footer class="w-full text-center bg-neutral-100 p-16">
+			<p class="mb-8">NERC 2022 - University of Massachusetts Lowell</p>
+			<p class="text-gray-700">Visit <a class="link" href="https://www.uml.edu/">uml.edu</a></p>
+		</footer>
+	</section>
+
+	<button class="scrollToTopBtn rounded-full fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp" onclick="handleScrollToTopClick()">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+		</svg>
+	</button>
+</body>
+</html>
