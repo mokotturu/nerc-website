@@ -30,7 +30,7 @@ resizeHeroImg();
 
 window.addEventListener('resize', resizeHeroImg);
 window.addEventListener('scroll', e => {
-	const scrollToTopBtn = document.querySelector('.scrollToTopBtn');
+	const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
 	if (window.scrollY != 0) {
 		scrollToTopBtn.classList.add('inView');
 		document.querySelectorAll('nav').forEach(elem => {
@@ -69,7 +69,7 @@ document.querySelector('#location-name').innerHTML = attractions[attractionId].n
 document.querySelector('#location-description').innerHTML = attractions[attractionId].description;
 document.querySelector('#location-location').innerHTML = attractions[attractionId].location;
 
-function handleLocationLeftClick() {
+document.querySelector('#location-btn-left-click').addEventListener('click', () => {
 	let nextAttractionId = Number(localAttractionsElem.dataset.locationId) - 1;
 	if (nextAttractionId === -1) nextAttractionId = 3;
 	localAttractionsElem.style.backgroundImage = `url(img/${attractions[nextAttractionId].img})`;
@@ -77,16 +77,20 @@ function handleLocationLeftClick() {
 	document.querySelector('#location-description').innerHTML = attractions[nextAttractionId].description;
 	document.querySelector('#location-location').innerHTML = attractions[nextAttractionId].location;
 	localAttractionsElem.dataset.locationId = nextAttractionId;
-}
+});
 
-function handleLocationRightClick() {
+document.querySelector('#location-btn-right-click').addEventListener('click', () => {
 	let nextAttractionId = (Number(localAttractionsElem.dataset.locationId) + 1) % 4;
 	localAttractionsElem.style.backgroundImage = `url(img/${attractions[nextAttractionId].img})`;
 	document.querySelector('#location-name').innerHTML = attractions[nextAttractionId].name;
 	document.querySelector('#location-description').innerHTML = attractions[nextAttractionId].description;
 	document.querySelector('#location-location').innerHTML = attractions[nextAttractionId].location;
 	localAttractionsElem.dataset.locationId = nextAttractionId;
-}
+});
+
+document.querySelectorAll('.mobile-nav-link').forEach(elem => {
+	elem.addEventListener('click', handleNavClick);
+});
 
 
 function resizeHeroImg() {
@@ -116,6 +120,6 @@ function handleNavClick() {
 	}
 }
 
-function handleScrollToTopClick() {
+document.querySelector('#scroll-to-top-btn').addEventListener('click', () => {
 	window.scrollTo(0, 0);
-}
+});

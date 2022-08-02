@@ -40,7 +40,7 @@
 		<div class="responsive-width">
 			<div class="flex justify-between items-center">
 				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
-				<button onclick="handleNavClick()">
+				<button class="mobile-nav-link">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="#0469B1" stroke-width="2">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
@@ -48,13 +48,13 @@
 			</div>
 			<div id="mobile-nav-items" class="noFadeInUp child:p-2 child:text-center flex flex-col gap-4 items-center transition-[height] duration-300 ease-in-out overflow-hidden h-0">
 				<div class="border-b border-umlblue-500 w-full my-3"></div>
-				<a onclick="handleNavClick()" class="nav-link" href="#info">Info</a>
-				<a onclick="handleNavClick()" class="nav-link" href="#schedule">Schedule</a>
-				<a onclick="handleNavClick()" class="nav-link" href="#location">Location</a>
-				<a onclick="handleNavClick()" class="nav-link" href="#speakers">Speakers</a>
-				<a onclick="handleNavClick()" class="nav-link" href="#organizers">Organizers</a>
-				<a onclick="handleNavClick()" class="nav-link" href="#register">Register</a>
-				<a onclick="handleNavClick()" class="nav-link" href="#contact">Contact</a>
+				<a class="nav-link mobile-nav-link" href="#info">Info</a>
+				<a class="nav-link mobile-nav-link" href="#schedule">Schedule</a>
+				<a class="nav-link mobile-nav-link" href="#location">Location</a>
+				<a class="nav-link mobile-nav-link" href="#speakers">Speakers</a>
+				<a class="nav-link mobile-nav-link" href="#organizers">Organizers</a>
+				<a class="nav-link mobile-nav-link" href="#register">Register</a>
+				<a class="nav-link mobile-nav-link" href="#contact">Contact</a>
 			</div>
 		</div>
 	</nav>
@@ -244,12 +244,12 @@
 									<p id="location-location" class="text-gray-700"></p>
 								</div>
 								<div class="slide-controls absolute w-full px-8 flex justify-between align-center top-1/2 left-0">
-									<button class="rounded-full bg-white shadow-md p-4" onclick="handleLocationLeftClick()">
+									<button class="rounded-full bg-white shadow-md p-4" id="location-btn-left-click">
 										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 											<path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
 										</svg>
 									</button>
-									<button class="rounded-full bg-white shadow-md p-4" onclick="handleLocationRightClick()">
+									<button class="rounded-full bg-white shadow-md p-4" id="location-btn-right-click">
 										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 											<path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
 										</svg>
@@ -274,11 +274,12 @@
 		</footer>
 	</section>
 
-	<button class="scrollToTopBtn rounded-full fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp" onclick="handleScrollToTopClick()">
+	<button class="scroll-to-top-btn rounded-full fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp" id="scroll-to-top-btn">
 		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="2">
 			<path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
 		</svg>
 	</button>
+
 	<script type="module" src="./index.js"></script>
 	<script type="module" src="./map.js"></script>
 </body>
