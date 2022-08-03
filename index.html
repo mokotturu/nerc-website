@@ -10,7 +10,7 @@
 	<meta property="og:type" content="website">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./index.css">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
 	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
@@ -21,7 +21,7 @@
 	<nav class="fixed top-0 w-full hidden lg:flex justify-center text-white z-10 backdrop-blur py-6">
 		<div class="responsive-width">
 			<div class="flex justify-between">
-				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
+				<header class="text-4xl text-center font-extrabold"><a href="/">NERC 2022</a></header>
 				<div class="child:p-2 child:text-center flex gap-4 items-center">
 					<a class="nav-link" href="#info">Info</a>
 					<a class="nav-link" href="#schedule">Schedule</a>
@@ -39,7 +39,7 @@
 	<nav class="fixed top-0 w-full flex lg:hidden justify-center text-white z-10 backdrop-blur py-6">
 		<div class="responsive-width">
 			<div class="flex justify-between items-center">
-				<header class="text-4xl text-center font-bold"><a href="/">NERC 2022</a></header>
+				<header class="text-4xl text-center font-extrabold"><a href="/">NERC 2022</a></header>
 				<button class="mobile-nav-link">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 noFadeInUp stroke-white fill-white" viewBox="0 0 20 20" fill="currentColor">
 						<path class="noFadeInUp" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
@@ -61,7 +61,8 @@
 
 	<section id="main-wrapper" class="">
 		<section id="hero" class="hero flex flex-col gap-12 justify-center items-center w-full bg-[url('img/aerial-north.webp')] bg-center bg-cover">
-			<h1 class="text-8xl text-white font-bold text-center">NERC 2022</h1>
+			<h1 class="text-5xl lg:text-6xl text-white font-extrabold text-center">Northeast Robotics Colloquium (NERC) 2022</h1>
+			<h2 class="text-2xl lg:text-2xl text-white font-semibold text-center brightness-90">October 8 &middot; UMass Lowell</h2>
 			<div class="hero-button-group flex justify-center items-center gap-8">
 				<a class="btn" href="#register">Register</a>
 				<a class="btn" href="#submit">Submit</a>
@@ -163,22 +164,25 @@
 
 						<section id="speakers">
 							<h2 class="sub-heading">Speakers</h2>
-							<div class="flex flex-col lg:grid grid-cols-2 gap-4">
+							<div class="flex flex-col lg:grid grid-cols-2">
 								<div class="card">
-									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #1" />
-									<p class="">Speaker #1</p>
+									<img class="card-image" src="img/marynel-vazquez.png" alt="Marynel Vázquez" />
+									<div class="card-content">
+										<p class="card-name">Marynel Vázquez</p>
+										<p class="card-description">Computer Science &middot; Yale University</p>
+									</div>
 								</div>
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #2" />
-									<p class="">Speaker #2</p>
+									<p class="card-name">Speaker #2</p>
 								</div>
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #3" />
-									<p class="">Speaker #3</p>
+									<p class="card-name">Speaker #3</p>
 								</div>
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Speaker #4" />
-									<p class="">Speaker #4</p>
+									<p class="card-name">Speaker #4</p>
 								</div>
 							</div>
 						</section>
@@ -188,19 +192,19 @@
 							<div class="flex flex-col lg:grid grid-cols-2 gap-4">
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #1" />
-									<p class="">Organizer #1</p>
+									<p class="card-name">Organizer #1</p>
 								</div>
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #2" />
-									<p class="">Organizer #2</p>
+									<p class="card-name">Organizer #2</p>
 								</div>
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #3" />
-									<p class="">Organizer #3</p>
+									<p class="card-name">Organizer #3</p>
 								</div>
 								<div class="card">
 									<img class="card-image" src="https://fpoimg.com/150" alt="Organizer #4" />
-									<p class="">Organizer #4</p>
+									<p class="card-name">Organizer #4</p>
 								</div>
 							</div>
 						</section>
@@ -272,7 +276,7 @@
 
 						<section id="local-attractions">
 							<h2 class="sub-heading">Local Attractions</h2>
-							<div data-location-id="0" id="local-attractions-card" class="attraction-card rounded-md border border-gray-200 text-center p-8 flex flex-col justify-end items-center gap-4 bg-cover bg-center h-[34rem]">
+							<div data-location-id="0" id="local-attractions-card" class="attraction-card rounded-md text-center p-8 flex flex-col justify-end items-center gap-4 bg-cover bg-center h-[34rem]">
 								<span class="attractions-gradient-overlay absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent via-[rgba(255,255,255,0.7)] to-white"></span>
 								<div id="tsongas-center-content" class="flex flex-col gap-4">
 									<h3 class="location-name font-semibold text-3xl">Tsongas Center</h3>
@@ -347,7 +351,7 @@
 		</footer>
 	</section>
 
-	<button class="scroll-to-top-btn rounded-full fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp" id="scroll-to-top-btn">
+	<button class="scroll-to-top-btn rounded-full shadow-md fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp" id="scroll-to-top-btn">
 		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
 			<path class="noFadeInUp" fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
 		</svg>
