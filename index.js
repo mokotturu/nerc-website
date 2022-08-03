@@ -1,27 +1,32 @@
+import tsongasCenterImg from './img/tsongas-center.jpg';
+import lowellNationalHistoricParkImg from './img/lowell-national-historic-park.jpg';
+import nationalStreetcarMuseumImg from './img/national-streetcar-museum.jpg';
+import boottCottonMillsMuseumImg from './img/boott-cotton-mills-museum.jpg';
+
 const attractions = [
 	{
 		name: 'Tsongas Center',
 		location: '300 Martin Luther King Jr. Way',
 		description: 'This multi-purpose arena is home to the NCAA Division I UMass Lowell River Hawks ice hockey team and hosts multiple events such as concerts, family events, sporting events, etc.',
-		img: 'tsongas-center.jpg',
+		img: tsongasCenterImg,
 	},
 	{
 		name: 'Lowell National Historic Park',
 		location: '67 Kirk Street',
 		description: 'Established in 1978, Lowell National Historical Park preserves the American Industrial Revolution in Lowell in a unique fashion. The park offers visitors an in-depth look into the textile industry that was the heart of the city with a working cotton mill exhibit, canal boat tours, and trolley rides to move you around the city.',
-		img: 'lowell-national-historic-park.jpg',
+		img: lowellNationalHistoricParkImg,
 	},
 	{
 		name: 'National Streetcar Museum',
 		location: '25 Shattuck Street',
 		description: 'If you love railroads, history, transit, and Lowell, or if you want to learn about how public transport has evolved in Lowell over the years, this museum is for you! It boasts interactive exhibits and displays, especially the hands-on activities. Their knowledgeable volunteers will answer any questions visitors have, and give a guided tour of their displays.',
-		img: 'national-streetcar-museum.jpg',
+		img: nationalStreetcarMuseumImg,
 	},
 	{
 		name: 'Boott Cotton Mills Museum',
 		location: '115 John Street',
 		description: 'The Boott Cotton Mills Museum at Lowell National Historical Park is the best place to learn about Lowell\'s industrial past. Explore the stories of the workers, engineers, inventors, and investors who made Lowell the first successful planned industrial city in the United States. Learn more about the city\'s role as a cutting-edge developer of technology and hub of social and economic change in the American Industrial Revolution.',
-		img: 'boott-cotton-mills-museum.jpg',
+		img: boottCottonMillsMuseumImg,
 	},
 ]
 
@@ -64,34 +69,36 @@ fadeInElems.forEach(elem => io.observe(elem));
 // set background image for local attractions
 const localAttractionsElem = document.querySelector('#local-attractions-card');
 let attractionId = Number(localAttractionsElem.dataset.locationId);
-localAttractionsElem.style.backgroundImage = `url(img/${attractions[attractionId].img})`;
+localAttractionsElem.style.backgroundImage = `url(${attractions[attractionId].img})`;
 document.querySelector('#location-name').innerHTML = attractions[attractionId].name;
 document.querySelector('#location-description').innerHTML = attractions[attractionId].description;
 document.querySelector('#location-location').innerHTML = attractions[attractionId].location;
 
+// local attractions left button
 document.querySelector('#location-btn-left-click').addEventListener('click', () => {
 	let nextAttractionId = Number(localAttractionsElem.dataset.locationId) - 1;
 	if (nextAttractionId === -1) nextAttractionId = 3;
-	localAttractionsElem.style.backgroundImage = `url(img/${attractions[nextAttractionId].img})`;
+	localAttractionsElem.style.backgroundImage = `url(${attractions[attractionId].img})`;
 	document.querySelector('#location-name').innerHTML = attractions[nextAttractionId].name;
 	document.querySelector('#location-description').innerHTML = attractions[nextAttractionId].description;
 	document.querySelector('#location-location').innerHTML = attractions[nextAttractionId].location;
 	localAttractionsElem.dataset.locationId = nextAttractionId;
 });
 
+// local attractions right button
 document.querySelector('#location-btn-right-click').addEventListener('click', () => {
 	let nextAttractionId = (Number(localAttractionsElem.dataset.locationId) + 1) % 4;
-	localAttractionsElem.style.backgroundImage = `url(img/${attractions[nextAttractionId].img})`;
+	localAttractionsElem.style.backgroundImage = `url(${attractions[nextAttractionId].img})`;
 	document.querySelector('#location-name').innerHTML = attractions[nextAttractionId].name;
 	document.querySelector('#location-description').innerHTML = attractions[nextAttractionId].description;
 	document.querySelector('#location-location').innerHTML = attractions[nextAttractionId].location;
 	localAttractionsElem.dataset.locationId = nextAttractionId;
 });
 
+// mobile nav hamburger menu
 document.querySelectorAll('.mobile-nav-link').forEach(elem => {
 	elem.addEventListener('click', handleNavClick);
 });
-
 
 function resizeHeroImg() {
 	document.querySelector('#hero').style.height = `${window.innerHeight}px`;
