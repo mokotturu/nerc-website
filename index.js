@@ -121,6 +121,9 @@ function handleNavClick() {
 				elem.style.background = 'initial';
 			});
 		}
+		document.querySelectorAll('.mobile-nav-overflow-item').forEach(elem => {
+			elem.classList.toggle('inView');
+		});
 	}
 }
 

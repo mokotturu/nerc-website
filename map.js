@@ -7,4 +7,5 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	maxZoom: 19,
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 }).addTo(map);
-L.marker([42.64369, -71.30703]).addTo(map).bindPopup('UMass Lowell Inn & Conference Center').openPopup();
+L.marker([42.64369, -71.30703]).addTo(map).bindPopup('UMass Lowell Inn & Conference Center');
+L.marker([42.64192295932301, -71.31426226292896]).addTo(map).bindPopup('NERVE Center');
