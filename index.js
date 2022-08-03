@@ -30,14 +30,8 @@ window.addEventListener('scroll', e => {
 	const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
 	if (window.scrollY != 0) {
 		scrollToTopBtn.classList.add('inView');
-		document.querySelectorAll('nav').forEach(elem => {
-			elem.style.background = 'rgba(16, 37, 64, 0.7)';
-		});
 	} else {
 		scrollToTopBtn.classList.remove('inView');
-		document.querySelectorAll('nav').forEach(elem => {
-			elem.style.background = 'initial';
-		});
 	}
 });
 

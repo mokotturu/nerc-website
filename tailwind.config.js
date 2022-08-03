@@ -10,7 +10,7 @@ module.exports = {
 					500: '#3068D9',
 					900: '#102540',
 				},
-				'umlbluedarktransparent': 'rgba(16, 37, 64, 0.7)',
+				'umlbluedarktransparent': 'rgba(16, 37, 64, 0.5)',
 			},
 		},
 	},
