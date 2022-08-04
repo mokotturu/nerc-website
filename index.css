@@ -24,7 +24,7 @@
 	}
 
 	.card-name {
-		@apply font-semibold text-gray-700;
+		@apply font-semibold text-gray-700 hover:underline flex items-center gap-2;
 	}
 
 	.card-description {
@@ -72,7 +72,7 @@
 	}
 
 	.link {
-		@apply text-umlblue-500 underline;
+		@apply text-umlblue-500 hover:underline;
 	}
 
 	.fadeInUp {
