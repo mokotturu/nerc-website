@@ -26,7 +26,7 @@
 <body>
 	<!-- desktop navbar -->
 	<nav
-		class="fixed top-0 w-full hidden lg:flex justify-center text-white z-10 bg-umlbluedarktransparent backdrop-blur py-4 noFadeInUp">
+		class="fixed top-0 w-full hidden lg:flex justify-center text-white z-[99999] bg-umlbluedarktransparent backdrop-blur py-4 noFadeInUp">
 		<div class="responsive-width">
 			<div class="flex justify-between">
 				<header class="text-4xl text-center font-extrabold"><a href="/">NERC 2022</a></header>
@@ -45,7 +45,7 @@
 
 	<!-- mobile navbar -->
 	<nav
-		class="fixed top-0 w-full flex lg:hidden justify-center text-white z-10 bg-umlbluedarktransparent backdrop-blur py-4 noFadeInUp">
+		class="fixed top-0 w-full flex lg:hidden justify-center text-white z-[99999] bg-umlbluedarktransparent backdrop-blur py-4 noFadeInUp">
 		<div class="responsive-width">
 			<div class="flex justify-between items-center">
 				<header class="text-4xl text-center font-extrabold"><a href="/">NERC 2022</a></header>
@@ -440,9 +440,9 @@
 						<section id="local-attractions">
 							<h2 class="sub-heading">Local Attractions</h2>
 							<div data-location-id="0" id="local-attractions-card"
-								class="attraction-card rounded-md text-center p-8 flex flex-col justify-end items-center gap-4 bg-cover bg-center h-[42rem] lg:h-[34rem]">
+								class="attraction-card rounded-md text-center p-8 flex flex-col justify-end items-center gap-4 bg-cover bg-center h-[42rem] lg:h-[34rem] inView">
 								<span
-									class="attractions-gradient-overlay rounded-md absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent via-[rgba(0,0,0,0.7)] to-black"></span>
+									class="noFadeInUp attractions-gradient-overlay rounded-md absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent via-[rgba(0,0,0,0.7)] to-black"></span>
 								<div id="tsongas-center-content" class="flex flex-col gap-4">
 									<h3 class="location-name font-extrabold text-3xl text-white">Tsongas Center</h3>
 									<p class="location-description text-white">This multi-purpose arena is home to the

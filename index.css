@@ -63,7 +63,8 @@
 		@apply hover:bg-neutral-200 even:bg-neutral-50;
 	}
 
-	td, th {
+	td,
+	th {
 		@apply pl-4 pr-16 py-2;
 	}
 
@@ -75,9 +76,9 @@
 		@apply text-umlblue-500 hover:underline;
 	}
 
-	.fadeInUp {
+	/* .fadeInUp {
 		@apply opacity-0 transition-all duration-300 transform-gpu translate-y-8;
-	}
+	} */
 
 	.fadeInUp.inView {
 		@apply opacity-100 translate-y-0;
