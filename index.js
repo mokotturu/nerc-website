@@ -35,29 +35,9 @@ window.addEventListener('scroll', e => {
 	}
 });
 
-// fade in on scroll animation using intersection observer
-const domElements = document.querySelectorAll('body *');
-domElements.forEach(elem => {
-	if (!elem.classList.contains('noFadeInUp')) elem.classList.add('fadeInUp');
-});
-
-const fadeInElems = document.querySelectorAll('.fadeInUp');
-const io = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-		if (
-			entry.isIntersecting &&
-			!entry.target.classList.contains('noFadeInUp')
-		)
-			entry.target.classList.add('inView');
-	});
-});
-
-fadeInElems.forEach(elem => io.observe(elem));
-
 // set background image for local attractions
 const localAttractionsElem = document.querySelector('#local-attractions-card');
 let firstAttractionId = Number(localAttractionsElem.dataset.locationId);
-localAttractionsElem.style.backgroundImage = `url(${attractions[firstAttractionId].img})`;
 
 // local attractions left button
 document
@@ -66,7 +46,6 @@ document
 		let attractionId = Number(localAttractionsElem.dataset.locationId);
 		let nextAttractionId = attractionId - 1;
 		if (attractionId - 1 <= -1) nextAttractionId = 3;
-		localAttractionsElem.style.backgroundImage = `url(${attractions[nextAttractionId].img})`;
 		localAttractionsElem.dataset.locationId = nextAttractionId;
 
 		document
@@ -92,7 +71,6 @@ document
 	.addEventListener('click', () => {
 		let attractionId = Number(localAttractionsElem.dataset.locationId);
 		let nextAttractionId = (attractionId + 1) % 4;
-		localAttractionsElem.style.backgroundImage = `url(${attractions[nextAttractionId].img})`;
 		localAttractionsElem.dataset.locationId = nextAttractionId;
 
 		document
@@ -131,18 +109,10 @@ function handleNavClick() {
 		// open
 		mobileNavItems.style.height = `${mobileNavItems.scrollHeight}px`;
 		mobileNavItems.classList.remove('h-0');
-		document.querySelectorAll('nav').forEach(elem => {
-			elem.style.background = 'rgba(16, 37, 64, 0.7)';
-		});
 	} else {
 		// close
 		mobileNavItems.style.height = `0px`;
 		mobileNavItems.classList.add('h-0');
-		if (window.scrollY == 0) {
-			document.querySelectorAll('nav').forEach(elem => {
-				elem.style.background = 'initial';
-			});
-		}
 		document.querySelectorAll('.mobile-nav-overflow-item').forEach(elem => {
 			elem.classList.toggle('inView');
 		});

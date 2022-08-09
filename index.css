@@ -76,16 +76,32 @@
 		@apply text-umlblue-500 hover:underline;
 	}
 
-	/* .fadeInUp {
-		@apply opacity-0 transition-all duration-300 transform-gpu translate-y-8;
-	} */
+	.location-img {
+		@apply rounded-md h-[20rem] lg:h-[34rem] w-full object-cover object-center mb-4;
+	}
 
-	.fadeInUp.inView {
-		@apply opacity-100 translate-y-0;
+	.location-name {
+		@apply mb-4;
+	}
+
+	.location-description {
+		@apply mb-4;
+	}
+
+	.location-location {
+		@apply mb-4;
 	}
 
 	.btn {
 		@apply px-8 py-4 text-gray-700 bg-white hover:text-umlblue-500 hover:bg-gray-300 font-semibold rounded-md;
+	}
+
+	.fadeInUp {
+		@apply opacity-0 transition-all duration-300 transform-gpu translate-y-8;
+	}
+
+	.fadeInUp.inView {
+		@apply opacity-100 translate-y-0;
 	}
 }
 
