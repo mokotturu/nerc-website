@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +11,22 @@
 	<meta property="og:type" content="website">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
 	<link rel="stylesheet" href="./index.css">
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/>
-	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+		integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+		crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+		integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+		crossorigin=""></script>
 	<title>NERC 2022</title>
 </head>
+
 <body>
 	<!-- desktop navbar -->
-	<nav class="fixed top-0 w-full hidden lg:flex justify-center text-white z-10 bg-umlbluedarktransparent backdrop-blur py-4">
+	<nav
+		class="fixed top-0 w-full hidden lg:flex justify-center text-white z-10 bg-umlbluedarktransparent backdrop-blur py-4 noFadeInUp">
 		<div class="responsive-width">
 			<div class="flex justify-between">
 				<header class="text-4xl text-center font-extrabold"><a href="/">NERC 2022</a></header>
@@ -36,17 +44,22 @@
 	</nav>
 
 	<!-- mobile navbar -->
-	<nav class="fixed top-0 w-full flex lg:hidden justify-center text-white z-10 bg-umlbluedarktransparent backdrop-blur py-4">
+	<nav
+		class="fixed top-0 w-full flex lg:hidden justify-center text-white z-10 bg-umlbluedarktransparent backdrop-blur py-4 noFadeInUp">
 		<div class="responsive-width">
 			<div class="flex justify-between items-center">
 				<header class="text-4xl text-center font-extrabold"><a href="/">NERC 2022</a></header>
 				<button class="mobile-nav-link">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 noFadeInUp stroke-white fill-white" viewBox="0 0 20 20" fill="currentColor">
-						<path class="noFadeInUp" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 noFadeInUp stroke-white fill-white"
+						viewBox="0 0 20 20" fill="currentColor">
+						<path class="noFadeInUp" fill-rule="evenodd"
+							d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+							clip-rule="evenodd" />
 					</svg>
 				</button>
 			</div>
-			<div id="mobile-nav-items" class="noFadeInUp child:p-2 child:text-center flex flex-col gap-4 items-center transition-[height] duration-300 ease-in-out overflow-hidden h-0">
+			<div id="mobile-nav-items"
+				class="noFadeInUp child:p-2 child:text-center flex flex-col gap-4 items-center transition-[height] duration-300 ease-in-out overflow-hidden h-0">
 				<div class="border-b border-umlblue-500 w-full my-3 mobile-nav-overflow-item"></div>
 				<a class="nav-link mobile-nav-link mobile-nav-overflow-item" href="#info">Info</a>
 				<a class="nav-link mobile-nav-link mobile-nav-overflow-item" href="#schedule">Schedule</a>
@@ -60,9 +73,12 @@
 	</nav>
 
 	<section id="main-wrapper" class="">
-		<section id="hero" class="hero flex flex-col gap-12 justify-center items-center w-full bg-[url('img/aerial-north.webp')] bg-center bg-cover">
-			<h1 class="text-5xl lg:text-6xl text-white font-extrabold text-center">Northeast Robotics Colloquium (NERC) 2022</h1>
-			<h2 class="text-2xl lg:text-2xl text-white font-semibold text-center brightness-90">October 8 &middot; UMass Lowell</h2>
+		<section id="hero"
+			class="hero flex flex-col gap-12 justify-center items-center w-full bg-[url('img/aerial-north.webp')] bg-center bg-cover noFadeInUp">
+			<h1 class="text-5xl lg:text-6xl text-white font-extrabold text-center">Northeast Robotics Colloquium (NERC)
+				2022</h1>
+			<h2 class="text-2xl lg:text-2xl text-white font-semibold text-center brightness-90">October 8 &middot; UMass
+				Lowell</h2>
 			<div class="hero-button-group flex justify-center items-center gap-8">
 				<a class="btn" href="#register">Register</a>
 				<a class="btn" href="#submit">Submit</a>
@@ -85,7 +101,12 @@
 
 						<section id="info">
 							<h2 class="sub-heading">What is NERC?</h2>
-							<p class="text-gray-700">The Northeast Robotics Colloquium (NERC) brings together the roboticists in the northeastern United States and Canada, in an event that is simultaneously a research meeting, a networking event, a job-fair, and a showcase for established and up-and-coming robot companies. We hope to promote the kind of healthy and well-connected robotics community that will fuel the field's rapid growth in the coming decade!</p>
+							<p class="text-gray-700">The Northeast Robotics Colloquium (NERC) brings together the
+								roboticists in the northeastern United States and Canada, in an event that is
+								simultaneously a research meeting, a networking event, a job-fair, and a showcase for
+								established and up-and-coming robot companies. We hope to promote the kind of healthy
+								and well-connected robotics community that will fuel the field's rapid growth in the
+								coming decade!</p>
 						</section>
 
 						<section id="schedule">
@@ -154,11 +175,15 @@
 
 						<section id="location">
 							<h2 class="sub-heading">Where will NERC be this year?</h2>
-							<p class="mb-6 text-gray-700">As we return to in-person events, the University of Massachusetts Lowell is proud to be hosting the Northeast Robotics Colloquium in 2022. NERC will be jointly located at the UMass Lowell Inn and Conference Center, and the New England Robotics Validation and Experimentation (NERVE) Center:</p>
+							<p class="mb-6 text-gray-700">As we return to in-person events, the University of
+								Massachusetts Lowell is proud to be hosting the Northeast Robotics Colloquium in 2022.
+								NERC will be jointly located at the UMass Lowell Inn and Conference Center, and the New
+								England Robotics Validation and Experimentation (NERVE) Center:</p>
 							<p class="text-umlblue-900 font-bold">UMass Lowell Inn and Conference Center:</p>
 							<p class="text-gray-700 mb-6">50 Warren St., Lowell, MA 01852</p>
 							<p class="text-umlblue-900 font-bold">NERVE Center:</p>
-							<p class="text-gray-700 mb-6">Located in UMass Lowell Innovation Hub, 110 Canal St., Lowell, MA 01852</p>
+							<p class="text-gray-700 mb-6">Located in UMass Lowell Innovation Hub, 110 Canal St., Lowell,
+								MA 01852</p>
 							<div id="map" class="h-96"></div>
 						</section>
 
@@ -168,10 +193,15 @@
 								<div class="card">
 									<img class="card-image" src="img/marynel-vazquez.png" alt="Marynel Vázquez" />
 									<div class="card-content">
-										<a href="https://cpsc.yale.edu/people/marynel-vazquez" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://cpsc.yale.edu/people/marynel-vazquez" target="_blank"
+											ref="noopener noreferrer" class="card-name">
 											Marynel Vázquez
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Computer Science &middot; Yale University</p>
@@ -180,13 +210,19 @@
 								<div class="card">
 									<img class="card-image" src="img/berk-calli.jpg" alt="Berk Calli" />
 									<div class="card-content">
-										<a href="https://www.wpi.edu/people/faculty/bcalli" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.wpi.edu/people/faculty/bcalli" target="_blank"
+											ref="noopener noreferrer" class="card-name">
 											Berk Calli
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
-										<p class="card-description">Robotics Engineering &middot; Worcester Polytechnic Institute</p>
+										<p class="card-description">Robotics Engineering &middot; Worcester Polytechnic
+											Institute</p>
 									</div>
 								</div>
 							</div>
@@ -198,10 +234,15 @@
 								<div class="card">
 									<img class="card-image" src="img/holly-yanco.jpg" alt="Holly Yanco" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/robotics/faculty/holly-yanco.aspx" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/robotics/faculty/holly-yanco.aspx" target="_blank"
+											ref="noopener noreferrer" class="card-name">
 											Holly Yanco
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Computer Science, Robotics &middot; UML</p>
@@ -210,10 +251,15 @@
 								<div class="card">
 									<img class="card-image" src="img/reza-ahmadzadeh.jpeg" alt="Reza Ahmadzadeh" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/sciences/computer-science/faculty/ahmadzadeh-reza.aspx" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/sciences/computer-science/faculty/ahmadzadeh-reza.aspx"
+											target="_blank" ref="noopener noreferrer" class="card-name">
 											Reza Ahmadzadeh
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Computer Science &middot; UML</p>
@@ -222,10 +268,15 @@
 								<div class="card">
 									<img class="card-image" src="img/maru-cabrera.jpg" alt="Maru Cabrera" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/sciences/computer-science/faculty/cabrera-maru.aspx" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/sciences/computer-science/faculty/cabrera-maru.aspx"
+											target="_blank" ref="noopener noreferrer" class="card-name">
 											Maru Cabrera
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Computer Science &middot; UML</p>
@@ -234,10 +285,15 @@
 								<div class="card">
 									<img class="card-image" src="img/noah-jafferis.jpg" alt="Noah Jafferis" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/Engineering/Electrical-Computer/faculty/Jafferis-Noah.aspx" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/Engineering/Electrical-Computer/faculty/Jafferis-Noah.aspx"
+											target="_blank" ref="noopener noreferrer" class="card-name">
 											Noah Jafferis
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Electrical and Computer Engineering &middot; UML</p>
@@ -246,10 +302,15 @@
 								<div class="card">
 									<img class="card-image" src="img/kshitij-jerath.jpg" alt="Kshitij Jerath" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/engineering/mechanical/faculty/jerath-kshitij.aspx" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/engineering/mechanical/faculty/jerath-kshitij.aspx"
+											target="_blank" ref="noopener noreferrer" class="card-name">
 											Kshitij Jerath
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Mechanical Engineering &middot; UML</p>
@@ -258,10 +319,15 @@
 								<div class="card">
 									<img class="card-image" src="img/paul-robinette.jpg" alt="Paul Robinette" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/profile/Paul_Robinette" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/profile/Paul_Robinette" target="_blank"
+											ref="noopener noreferrer" class="card-name">
 											Paul Robinette
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Electrical and Computer Engineering &middot; UML</p>
@@ -270,10 +336,15 @@
 								<div class="card">
 									<img class="card-image" src="img/kelilah-wolkowicz.jpg" alt="Kelilah Wolkowicz" />
 									<div class="card-content">
-										<a href="https://www.uml.edu/Engineering/Mechanical/faculty/Wolkowicz-Kelilah.aspx" target="_blank" ref="noopener noreferrer" class="card-name">
+										<a href="https://www.uml.edu/Engineering/Mechanical/faculty/Wolkowicz-Kelilah.aspx"
+											target="_blank" ref="noopener noreferrer" class="card-name">
 											Kelilah Wolkowicz
-											<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-												<path class="noFadeInUp" fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd" />
+											<svg xmlns="http://www.w3.org/2000/svg"
+												class="h-5 w-5 fill-gray-700 noFadeInUp" viewBox="0 0 20 20"
+												fill="currentColor">
+												<path class="noFadeInUp" fill-rule="evenodd"
+													d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.498-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z"
+													clip-rule="evenodd" />
 											</svg>
 										</a>
 										<p class="card-description">Mechanical Engineering &middot; UML</p>
@@ -284,25 +355,37 @@
 
 						<section id="submit">
 							<h2 class="sub-heading">Submissions and Important dates</h2>
-							<p class="text-gray-700 mb-4">Abstracts and posters should be submitted via <a href="https://easychair.org/cfp/NERC2022" target="_blank" rel="noreferrer noopener" class="link">EasyChair</a>. Submission guidelines and requirements are listed on the EasyChair portal.</p>
+							<p class="text-gray-700 mb-4">Abstracts and posters should be submitted via <a
+									href="https://easychair.org/cfp/NERC2022" target="_blank" rel="noreferrer noopener"
+									class="link">EasyChair</a>. Submission guidelines and requirements are listed on the
+								EasyChair portal.</p>
 							<p class="text-gray-700 mb-2">Important Dates:</p>
 							<ul class="list list-inside list-disc child:mb-2 last:mb-0">
-								<li class="text-gray-700">Paper abstracts are due August 26 (Friday) by 11:59 PM EST</li>
-								<li class="text-gray-700">Notification of acceptance/rejection: September 9 (Friday)</li>
-								<li class="text-gray-700">Poster submissions are due September 23 (Friday) by 11:59 PM EST</li>
-								<li class="text-gray-700">Due date to communicate demo requirements (if any): September 23 (Friday) by 11:59 PM EST. These requests should be sent to <a href="mailto:nerc.uml@gmail.com" target="_blank" rel="noreferrer noopener" class="link">nerc.uml@gmail.com</a>.</li>
+								<li class="text-gray-700">Paper abstracts are due August 26 (Friday) by 11:59 PM EST
+								</li>
+								<li class="text-gray-700">Notification of acceptance/rejection: September 9 (Friday)
+								</li>
+								<li class="text-gray-700">Poster submissions are due September 23 (Friday) by 11:59 PM
+									EST</li>
+								<li class="text-gray-700">Due date to communicate demo requirements (if any): September
+									23 (Friday) by 11:59 PM EST. These requests should be sent to <a
+										href="mailto:nerc.uml@gmail.com" target="_blank" rel="noreferrer noopener"
+										class="link">nerc.uml@gmail.com</a>.</li>
 							</ul>
 						</section>
 
 						<section id="register">
 							<h2 class="sub-heading">How do I register?</h2>
-							<p class="mb-8 text-gray-700">Registration will open on August 29 (Monday). Additional details to follow.</p>
+							<p class="mb-8 text-gray-700">Registration will open on August 29 (Monday). Additional
+								details to follow.</p>
 							<div id="plans" class="flex flex-col lg:flex-row justify-center gap-8 flex-wrap">
 								<div class="plan">
 									<p class="plan-title">K-12 Students and Teachers</p>
 									<p class="plan-description">Online Registration</p>
 									<p class="plan-price">$15</p>
-									<a href="#" class="plan-button bg-gray-300 pointer-events-none cursor-not-allowed">Choose plan</a>
+									<a href="#"
+										class="plan-button bg-gray-300 pointer-events-none cursor-not-allowed">Choose
+										plan</a>
 									<hr class="my-6" />
 									<p class="plan-list-heading">Who's this for</p>
 									<ul class="eligible-members list-disc list-inside">
@@ -316,7 +399,9 @@
 									<p class="plan-title">Regular Registration</p>
 									<p class="plan-description">Online Registration</p>
 									<p class="plan-price">$50</p>
-									<a href="#" class="plan-button bg-gray-300 pointer-events-none cursor-not-allowed">Choose plan</a>
+									<a href="#"
+										class="plan-button bg-gray-300 pointer-events-none cursor-not-allowed">Choose
+										plan</a>
 									<hr class="my-6" />
 									<p class="plan-list-heading">Who's this for</p>
 									<ul class="eligible-members list-disc list-inside">
@@ -330,7 +415,9 @@
 									<p class="plan-title">On-Site Registration</p>
 									<p class="plan-description">Month date, year On-Site Registration</p>
 									<p class="plan-price">$75</p>
-									<a href="#" class="plan-button bg-gray-300 pointer-events-none cursor-not-allowed">Choose plan</a>
+									<a href="#"
+										class="plan-button bg-gray-300 pointer-events-none cursor-not-allowed">Choose
+										plan</a>
 									<hr class="my-6" />
 									<p class="plan-list-heading">Who's this for</p>
 									<ul class="eligible-members list-disc list-inside">
@@ -345,56 +432,92 @@
 
 						<section id="contact">
 							<h2 class="sub-heading">Contact</h2>
-							<p class="text-gray-700">Please direct all communication to <a href="mailto:nerc.uml@gmail.com" target="blank" rel="noreferrer noopener" class="link">nerc.uml@gmail.com</a>.</p>
+							<p class="text-gray-700">Please direct all communication to <a
+									href="mailto:nerc.uml@gmail.com" target="blank" rel="noreferrer noopener"
+									class="link">nerc.uml@gmail.com</a>.</p>
 						</section>
 
 						<section id="local-attractions">
 							<h2 class="sub-heading">Local Attractions</h2>
-							<div data-location-id="0" id="local-attractions-card" class="attraction-card rounded-md text-center p-8 flex flex-col justify-end items-center gap-4 bg-cover bg-center h-[42rem] lg:h-[34rem]">
-								<span class="attractions-gradient-overlay rounded-md absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent via-[rgba(0,0,0,0.7)] to-black"></span>
+							<div data-location-id="0" id="local-attractions-card"
+								class="attraction-card rounded-md text-center p-8 flex flex-col justify-end items-center gap-4 bg-cover bg-center h-[42rem] lg:h-[34rem]">
+								<span
+									class="attractions-gradient-overlay rounded-md absolute w-full h-full top-0 left-0 bg-gradient-to-b from-transparent via-[rgba(0,0,0,0.7)] to-black"></span>
 								<div id="tsongas-center-content" class="flex flex-col gap-4">
 									<h3 class="location-name font-extrabold text-3xl text-white">Tsongas Center</h3>
-									<p class="location-description text-white">This multi-purpose arena is home to the NCAA Division I UMass Lowell River Hawks ice hockey team and hosts multiple events such as concerts, family events, sporting events, etc.</p>
+									<p class="location-description text-white">This multi-purpose arena is home to the
+										NCAA Division I UMass Lowell River Hawks ice hockey team and hosts multiple
+										events such as concerts, family events, sporting events, etc.</p>
 									<div class="flex justify-center items-center gap-2">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp"
+											fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 										</svg>
 										<p class="location-location text-white">300 Martin Luther King Jr. Way</p>
 									</div>
 								</div>
 
 								<div id="lowell-national-historic-park-content" class="hidden flex-col gap-4">
-									<h3 class="location-name font-extrabold text-3xl text-white">Lowell National Historic Park</h3>
-									<p class="location-description text-white">Established in 1978, Lowell National Historical Park preserves the AMerican Industrial Revolution in Lowell in a unique fashion. The park offers visitors an in-depth look into the textile industry that was the heart of the city with a working cotton mill exhibit, canal boat tours, and trolley rides to move you around the city.</p>
+									<h3 class="location-name font-extrabold text-3xl text-white">Lowell National
+										Historic Park</h3>
+									<p class="location-description text-white">Established in 1978, Lowell National
+										Historical Park preserves the AMerican Industrial Revolution in Lowell in a
+										unique fashion. The park offers visitors an in-depth look into the textile
+										industry that was the heart of the city with a working cotton mill exhibit,
+										canal boat tours, and trolley rides to move you around the city.</p>
 									<div class="flex justify-center items-center gap-2">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp"
+											fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 										</svg>
 										<p class="location-location text-white">67 Kirk Street</p>
 									</div>
 								</div>
 
 								<div id="national-streetcar-museum-content" class="hidden flex-col gap-4">
-									<h3 class="location-name font-extrabold text-3xl text-white">National Streetcar Museum</h3>
-									<p class="location-description text-white">If you love railroads, history, transit, and Lowell, or if you want to learn about how public transport has evolved in Lowell over the years, this museum is for you! It boasts interactive exhibits and displays, especially the hands-on activities. Their knowledgeable volunteers will answer any questions visitors have, and give a guided tour of their displays.</p>
+									<h3 class="location-name font-extrabold text-3xl text-white">National Streetcar
+										Museum</h3>
+									<p class="location-description text-white">If you love railroads, history, transit,
+										and Lowell, or if you want to learn about how public transport has evolved in
+										Lowell over the years, this museum is for you! It boasts interactive exhibits
+										and displays, especially the hands-on activities. Their knowledgeable volunteers
+										will answer any questions visitors have, and give a guided tour of their
+										displays.</p>
 									<div class="flex justify-center items-center gap-2">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp"
+											fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 										</svg>
 										<p class="location-location text-white">25 Shattuck Street</p>
 									</div>
 								</div>
 
 								<div id="boott-cotton-mills-museum-content" class="hidden flex-col gap-4">
-									<h3 class="location-name font-extrabold text-3xl text-white">Boott Cotton Mills Museum</h3>
-									<p class="location-description text-white">The Boott Cotton Mills Museum at Lowell National Historical Park is the best place to learn about Lowell\'s industrial past. Explore the stories of the workers, engineers, inventors, and investors who made Lowell the first successful planned industrial city in the United States. Learn more about the city's role as a cutting-edge developer of technology and hub of social and economic change in the AMerican Industrial Revolution.</p>
+									<h3 class="location-name font-extrabold text-3xl text-white">Boott Cotton Mills
+										Museum</h3>
+									<p class="location-description text-white">The Boott Cotton Mills Museum at Lowell
+										National Historical Park is the best place to learn about Lowell\'s industrial
+										past. Explore the stories of the workers, engineers, inventors, and investors
+										who made Lowell the first successful planned industrial city in the United
+										States. Learn more about the city's role as a cutting-edge developer of
+										technology and hub of social and economic change in the AMerican Industrial
+										Revolution.</p>
 									<div class="flex justify-center items-center gap-2">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+										<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 stroke-white noFadeInUp"
+											fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+											<path class="noFadeInUp" stroke-linecap="round" stroke-linejoin="round"
+												d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 										</svg>
 										<p class="location-location text-white">115 John Street</p>
 									</div>
@@ -402,13 +525,21 @@
 
 								<div class="slide-controls w-full px-2 lg:px-8 flex justify-between align-center">
 									<button class="rounded-full bg-white shadow-md p-4" id="location-btn-left-click">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-											<path class="noFadeInUp" fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+										<svg xmlns="http://www.w3.org/2000/svg"
+											class="h-5 w-5 stroke-gray-700 noFadeInUp" viewBox="0 0 20 20"
+											fill="currentColor">
+											<path class="noFadeInUp" fill-rule="evenodd"
+												d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+												clip-rule="evenodd" />
 										</svg>
 									</button>
 									<button class="rounded-full bg-white shadow-md p-4" id="location-btn-right-click">
-										<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-gray-700 noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-											<path class="noFadeInUp" fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+										<svg xmlns="http://www.w3.org/2000/svg"
+											class="h-5 w-5 stroke-gray-700 noFadeInUp" viewBox="0 0 20 20"
+											fill="currentColor">
+											<path class="noFadeInUp" fill-rule="evenodd"
+												d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+												clip-rule="evenodd" />
 										</svg>
 									</button>
 								</div>
@@ -425,13 +556,19 @@
 		</footer>
 	</section>
 
-	<button class="scroll-to-top-btn rounded-full shadow-md fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp" id="scroll-to-top-btn">
-		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white noFadeInUp" viewBox="0 0 20 20" fill="currentColor">
-			<path class="noFadeInUp" fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd" />
+	<button
+		class="scroll-to-top-btn rounded-full shadow-md fixed bottom-4 right-4 bg-umlblue-500 p-4 duration-300 text-white fadeInUp noFadeInUp"
+		id="scroll-to-top-btn">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white noFadeInUp" viewBox="0 0 20 20"
+			fill="currentColor">
+			<path class="noFadeInUp" fill-rule="evenodd"
+				d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+				clip-rule="evenodd" />
 		</svg>
 	</button>
 
 	<script type="module" src="./index.js"></script>
 	<script type="module" src="./map.js"></script>
 </body>
+
 </html>
