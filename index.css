@@ -44,7 +44,7 @@
 	}
 
 	.plan-button {
-		@apply bg-umlblue-500 text-white w-full rounded-lg text-center py-2 hover:brightness-125;
+		@apply bg-umlblue-500 text-white w-full rounded-lg text-center py-2 hover:brightness-125 transition-all;
 	}
 
 	.plan-price {
