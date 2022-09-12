@@ -12,9 +12,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 L.marker([42.64369, -71.30703])
 	.addTo(map0)
 	.bindPopup('UMass Lowell Inn & Conference Center');
-L.marker([42.64192295932301, -71.31426226292896])
-	.addTo(map0)
-	.bindPopup('NERVE Center');
 
 // hotels nearby
 let map1 = L.map('map1').setView([42.64369, -71.30703], 12);
