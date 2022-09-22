@@ -11,8 +11,12 @@
 		@apply text-umlblue-900 text-3xl font-bold my-6;
 	}
 
+	.card-container {
+		@apply p-4 lg:p-6 rounded-lg flex flex-col outline outline-1 hover:shadow-lg transition-shadow outline-gray-300 cursor-pointer;
+	}
+
 	.card {
-		@apply rounded-lg flex p-6 items-center gap-8;
+		@apply flex items-center;
 	}
 
 	.card-image {
@@ -20,7 +24,7 @@
 	}
 
 	.card-content {
-		@apply flex flex-col items-start gap-2;
+		@apply flex flex-col items-start gap-2 ml-4 lg:ml-6;
 	}
 
 	.card-name {
@@ -29,6 +33,10 @@
 
 	.card-description {
 		@apply font-semibold text-umlblue-500;
+	}
+
+	.card-abstract {
+		@apply transition-[height] ease-in-out duration-300 overflow-hidden;
 	}
 
 	.plan {

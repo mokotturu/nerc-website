@@ -14,7 +14,6 @@ window.addEventListener('scroll', e => {
 // set background image for local attractions
 const localAttractionsElem = document.querySelector('#local-attractions-card');
 const attractions = localAttractionsElem.children;
-console.log(attractions);
 let firstAttractionId = Number(localAttractionsElem.dataset.locationId);
 
 // local attractions left button
@@ -49,6 +48,20 @@ document
 // mobile nav hamburger menu
 document.querySelectorAll('.mobile-nav-link').forEach(elem => {
 	elem.addEventListener('click', handleNavClick);
+});
+
+// speakers onclick event handler
+document.querySelectorAll('.card-container.expand').forEach(elem => {
+	const abstractElem = document.querySelector(`#${elem.id} .card-abstract`);
+	if (abstractElem === null) return;
+
+	elem.addEventListener('click', () => {
+		if (abstractElem.style.height === `0px`) {
+			abstractElem.style.height = `${abstractElem.scrollHeight}px`;
+		} else {
+			abstractElem.style.height = `0px`;
+		}
+	});
 });
 
 function resizeHeroImg() {
