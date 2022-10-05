@@ -71,13 +71,12 @@
 		@apply hover:bg-neutral-200 even:bg-neutral-50;
 	}
 
-	td,
-	th {
-		@apply pl-4 pr-16 py-2;
+	td p {
+		@apply ml-4 mr-16 my-2;
 	}
 
 	td {
-		@apply first:text-black first:font-semibold text-gray-700;
+		@apply first:text-black first:font-bold text-gray-700 align-top;
 	}
 
 	.link {
