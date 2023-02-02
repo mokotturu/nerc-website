@@ -1,3 +1,5 @@
+/* please never use @apply :-/ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
